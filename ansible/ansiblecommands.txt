@@ -1,0 +1,74 @@
+ansible web01 -m ping -i inventory 
+   25  sudo cat /etc/ansible/ansible.cfg 
+   26  ansible web01 -m ping -i inventory 
+   27  cat /home/ubuntu/.ssh/known_hosts
+   28  chmod 777 new.pem 
+   29  cat /home/ubuntu/.ssh/known_hosts
+   30  ansible web01 -m ping -i inventory 
+   31  chmod 400 new.pem 
+   32  ansible web01 -m ping -i inventory 
+   33  cat inventory 
+   34  vi inventory 
+   35  ansible web02 -m ping -i inventory 
+   36  vi inventory 
+   37  ansible servers -m ping -i inventory 
+   38  ansible dc_oregon -m ping -i inventory 
+   39  vi inventory 
+   40  ansible dc_oregon -m ping -i inventory 
+   41  cat inventory 
+   42  vi inventory 
+   43  ansible dc_oregon -m ping -i inventory 
+   44  vi inventory 
+   45  ansible dc_oregon -m ping -i inventory 
+   46  vi inventory 
+   47  ansible web03 -m ping -i inventory 
+   48  ansible dc_oregon -m ping -i inventory 
+   49  ansible all -m ping -i inventory 
+   50  ansible servers -m ping -i inventory 
+   51  ansible '*' -m ping -i inventory 
+   52  ansible servers2 -m ping -i inventory 
+   53  ansible dc_oregon -a "/sbin/poweroff
+   54  ansible dc_oregon -a "/sbin/poweroff"
+   55  ansible all -a "/sbin/poweroff"
+   56  ls
+   57  cd ..
+   58  ls
+   59  cd vprofile/
+   60  ls
+   61  cp -d exercise1 .
+   62  cp -d exercise1 ./
+   63  ls
+   64  cd exercise1/
+   65  ls
+   66  cd ..
+   67  ls
+   68  cd ..
+   69  cd vprofile/
+   70  cp -d 
+   71  cp exercise1 ./exercise2
+   72  cp -r exercise1 ./exercise2
+   73  ls
+   74  cd exercise
+   75  cd exercise2
+   76  ls
+   77  cat inventory 
+   78  ansible servers -m ansible.builtin.apt -a "name=httpd state=present" -i inventory --become
+   79  ansible servers -m ansible.builtin.apt -a "name=nginx state=present" -i inventory --become
+   80  ansible servers -m ansible.builtin.apt -a "name=nginx state=absent" -i inventory --become
+   81  ansible servers -m ansible.builtin.apt -a "name=nginx state=started enabled=yes" -i inventory --become
+   82  ansible servers -m ansible.builtin.apt -a "name=nginx state=present enabled=yes" -i inventory --become
+   83  ansible servers -m ansible.builtin.apt -a "name=nginx state=present" -i inventory --become
+   84  ansible servers -m ansible.builtin.service -a "name=nginx state=started enabled=yes" -i inventory --become
+   85  ls
+   86  vim index.html
+   87  ansible servers -m ansible.builtin.copy -a "src=index.html dest=/var/www/html/Index.html" -i inventory --become
+   88  vim index.html 
+   89  ansible servers -m ansible.builtin.copy -a "src=index.html dest=/var/www/html/Index.html" -i inventory --become
+   90  ansible servers -m ansible.builtin.copy -a "src=index.html dest=/var/www/html/index.html" -i inventory --becomeansible
+   91  last
+   92  history 
+   93  ansible dc_oregon -m ping -i inventory
+   94  ansible web01 -m ansible.builtin.shell -a "shutdown -h "now" -i inventory --become
+   95  ansible web01 -m ansible.builtin.shell -a "shutdown -h now" -i inventory --become
+   96  ansible all -m ansible.builtin.shell -a "start -h now" -i inventory --become
+   97  ansible web01 -m ansible.builtin.shell -a "shutdown -h now" -i inventory --become
