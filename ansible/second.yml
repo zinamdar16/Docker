@@ -17,4 +17,17 @@
     apt:
       name: git
       state: present
-   
+
+---
+ - name: create a user
+   hosts: web01
+   become: yes
+
+   tasks:
+   - name: useradding
+     user:
+       name: zaid
+       shell: /bin/bash
+       groups: sudo
+       state: present
+       create_home: yes
