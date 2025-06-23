@@ -72,3 +72,5 @@ ansible web01 -m ping -i inventory
    95  ansible web01 -m ansible.builtin.shell -a "shutdown -h now" -i inventory --become
    96  ansible all -m ansible.builtin.shell -a "start -h now" -i inventory --become
    97  ansible web01 -m ansible.builtin.shell -a "shutdown -h now" -i inventory --become
+
+
