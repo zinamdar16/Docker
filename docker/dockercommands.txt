@@ -1,0 +1,32 @@
+sudo apt install docker.io
+  450  sudo usermod -aG docker $USER
+  451  docker ps
+  452  sudo chown $USER /var/run/docker.sock 
+  453  docker ps
+  454  docker ps -a
+  455  docker images
+  456  docker network ls
+  457  docker volume ls
+  458  docker run -d --name test1 nginx
+  459  docker ps -a
+  460  docker stop test1 test1 
+  461  docker ps -a
+  462  vi Dockerfile
+  463  docker build -t firstimg .
+  464  docker images
+  465  vi Dockerfile
+  466  docker build -t firstimg .
+  467  docker images
+  468  docker run -dt --name firstcont -p 80:80 firstimg
+  469  docker ps -a
+  470  docker exec -it firstcont /bin/bash
+  471  docker ps -a
+  472  docker inspect 796710fb16f4
+  473  docker exec -it firstcont /bin/bash
+  474  docker run -it --name volcont -v /home/ubuntu/dockermaterials/:/usr/share/nginx/html firstimg
+  475  docker run -it --name volcont -v /home/ubuntu/dockermaterials/:/home/ubuntu ubuntu
+  476  docker run -it --name volcont2 -v /home/ubuntu/dockermaterials/:/home/ubuntu ubuntu
+  477  ls
+  478  docker system prune 
+  479  docker ps -a
+  480  docker stop firstcont 
