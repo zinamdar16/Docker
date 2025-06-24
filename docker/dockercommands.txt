@@ -29,4 +29,8 @@ sudo apt install docker.io
   477  ls
   478  docker system prune 
   479  docker ps -a
-  480  docker stop firstcont 
+  480  docker stop firstcont
+
+
+
+ 
